@@ -1,0 +1,24 @@
+.job-description-input {
+    display: flex;
+    flex-direction: column; 
+    justify-content: start;
+    width: 400px;
+    margin: 10px;
+}
+.job-description-input h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+.job-description-input textarea{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    resize: none;
+}

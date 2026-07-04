@@ -1,0 +1,37 @@
+{
+    "name": "Ben Jason",
+    "email": "benjson@gmail.com",
+    "phone": "+1 123-456-7890",
+    "address": "123 Main St, Anytown, USA",
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Science",
+            "institution": "University of Example",
+            "year": 2020
+        }
+    ],
+    "experience": [
+        {
+            "title": "Software Engineer",
+            "company": "Tech Solutions Inc.",
+            "years": "2020-2023",
+            "responsibilities": [
+                "Developed web applications using React and Node.js",
+                "Collaborated with cross-functional teams to define project requirements"
+            ]
+        }
+    ],
+    "skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Python"
+    ],
+    "projects": [
+        {
+            "name": "Personal Portfolio Website",
+            "description": "A personal website to showcase my projects and skills.",
+            "technologies": ["HTML", "CSS", "JavaScript"]
+        }
+    ]
+}

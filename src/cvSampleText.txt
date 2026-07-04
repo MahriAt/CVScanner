@@ -1,0 +1,19 @@
+Name: Ben Jason
+Email: benjson@gmail.com
+Phone: +1 123-456-7890
+Address: 123 Main St, Anytown, USA
+Education:
+Degree: Bachelor of Science in Computer Science,
+Institution: University of Example,
+Year: 2020
+        
+Experience:
+Title: Software Engineer,
+Company: Tech Solutions Inc.,
+Years: 2020-2023,
+Responsibilities:Developed web applications using React and Node.js,collaborated with cross-functional teams to define project requirements
+Skills:JavaScript,React,Node.js,Python
+Projects:
+Personal Portfolio Website,
+Description: A personal website to showcase my projects and skills.
+Technologies: HTML, CSS, JavaScript

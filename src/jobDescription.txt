@@ -1,0 +1,45 @@
+Job Description
+
+In this role, you will:
+
+Be responsible for implementing and maintaining the user interface components of our applications.
+Ensure a seamless and visually appealing user experience.
+Focus on using React to build robust and scalable frontend solutions.
+
+Qualifications
+
+About The Role:
+
+We are seeking a Frontend Developer to join our Development team. This role might be the perfect fit for you if;
+
+Minimum of 2 years of professional experience with React.js.
+You have a Bachelor's or higher degree from the CS Engineering department
+Strong proficiency in JavaScript/Typescript, HTML, and CSS.
+Extensive experience with React and its core principles.
+Knowledge of frontend build tools and package managers, such as Webpack and npm.
+Familiarity with version control systems, particularly Git.
+Solid understanding of responsive design and mobile-first development principles.
+Experience with RESTful APIs and integrating frontend components with backend services.
+Nice to have: Experience with Wordpress and familiarity with its theming system.
+Nice to have: Knowledge of CSS preprocessors, such as Sass or LESS.
+
+Additional Information
+
+Job Features:
+
+Here's what you can expect from this position:
+
+Our work setup is exclusively on-site; remote or hybrid options are not available. You'll be joining us in the office.
+If you're not currently based in Antalya, don't worry – we offer a relocation support program.
+Exciting news! We operate on a four-day work week, with Mondays off.
+You'll have the opportunity to collaborate directly with our CTO.
+Enjoy a meal card benefit of 5,000 TL. (Exceeding 60% of the market average.)
+Our office is located at Work C- Safa Plaza.
+Our working hours are from 10 am to 8 pm.
+
+️ Recruiting Process:
+Here's how our recruitment process works:
+
+Discovery Call (30 minutes)
+Technical Background Check
+Meet the Team (30 minutes)
