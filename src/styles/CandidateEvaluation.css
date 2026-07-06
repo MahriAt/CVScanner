@@ -6,11 +6,33 @@
     justify-content: space-between;
 }
 .info{
+    width: 100%;
+    margin-bottom: 0%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .right-side{
     margin-left: auto;
     text-align: right;
     justify-content: end;
+}
+.showMore{
+    background:none;
+    border: none;
+    margin: auto;
+}
+.showMore > img{
+    
+    width: 50px;
+    background-color: none;
+}
+a{
+    color: #9ca3af;
+}
+
+@media screen and (max-width: 800px){
+    .info{
+        flex-direction: column;
+    }
 }

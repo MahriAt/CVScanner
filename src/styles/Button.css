@@ -1,0 +1,13 @@
+.Buttoms_submit_Clear{
+    width: 50%;
+    font-size: medium;
+    margin-top: 10px;
+    background: none;
+    height: 50px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+}
+.Buttoms_submit_Clear:hover {
+    background-color: aliceblue;
+    color: black;
+}

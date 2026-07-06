@@ -83,9 +83,9 @@ function App() {
       </div>
       
       
-      <Button disabled={!isValid} text="Submit" onClick={handleEvaluate} />
+      <Button className='Buttoms_submit_Clear' disabled={!isValid} text="Submit" onClick={handleEvaluate} />
         {loading ? 'Evaluating...' : 'Evaluate CV'}
-        {loading ? <p></p> : <h2>Evaluation Result</h2>}
+        {result ? <p></p> : <h2 style={{marginTop: '20px'}}>Evaluation Result</h2>}
       <CandidateEvaluation evaluate={result} />
     </section>
   )

@@ -56,6 +56,6 @@ export default function DragAndDrop({ onFileSelect }: DragAndDropProps) {
         <h2>Upload</h2>
         { file && file.map((f, i) => <p key={i}>{f.name}</p>)}
     </div>
-    <button onClick={()=>{setFile(null); if(uploadRef.current) uploadRef.current.value = '';}}>Clear</button>
+    <button className="Buttoms_submit_Clear" onClick={()=>{setFile(null); if(uploadRef.current) uploadRef.current.value = '';}}>Clear</button>
     </div>);
 }

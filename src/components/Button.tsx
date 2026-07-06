@@ -1,5 +1,7 @@
-export default function Button({text, onClick, disabled}: {text: string, onClick: () => void, disabled: boolean}) {
+import '../styles/Button.css'
+
+export default function Button({className, text, onClick, disabled}: {className: string, text: string, onClick: () => void, disabled: boolean}) {
     return (
-        <button type="button" disabled={disabled} onClick={onClick}>{text}</button>
+        <button className={className} type="button" disabled={disabled} onClick={onClick}>{text}</button>
     )
 }

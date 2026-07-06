@@ -1,35 +1,37 @@
 {
-  "name": "Mahri Atamammedova",
-  "phone": "(+90) 5065229107",
-  "email": "mahriatama11@gmail.com",
-  "overall_score": 70,
+  "name": "Sam Jonsan",
+  "phone": "+90-506-522-91-07",
+  "email": "akbd1@gmail.com",
+  "overall_score": 15,
   "matched_skills": [
-    "Node.js",
-    "TypeScript",
-    "JavaScript",
-    "MySQL",
     "SQL",
-    "HTML",
-    "CSS",
-    "React",
-    "Git",
-    "GitHub",
-    "Backend Development Logic",
-    "Frontend Development",
-    "Data Models",
-    "RESTful API Design",
-    "Linux",
-    "Bug Reporting",
-    "New Technologies Learning Aptitude"
+    "MySQL",
+    "PostgreSQL",
+    "Oracle",
+    "Working with relational databases",
+    "English (Fluent)",
+    "Collaboration",
+    "Teamwork",
+    "Troubleshooting"
   ],
   "missing_skills": [
-    "Active participation in bug fixing (coding-level)"
+    "Java development (professional experience)",
+    "Spring Framework",
+    "Spring Boot",
+    "1+ years of hands-on software development experience",
+    "Solid understanding of Object-Oriented Programming (OOP) principles",
+    "Analysis and design principles",
+    "Common design patterns",
+    "Backend services and APIs (Java/Spring)",
+    "Code reviews"
   ],
-  "experience_summary": "Mahri is currently a Computer Engineering student with significant hands-on project experience, including a full-stack AI-powered web application built with React, TypeScript, Node.js, and Express. She demonstrates strong technical proficiency in Node.js backend development, MySQL database operations, and modern frontend technologies. She also holds an ongoing QA Tester role. However, she currently lacks documented professional software development experience of at least one year, as her listed 'Web Developer Intern' position dates (04/2025 – 06/2026) are in the future.",
+  "experience_summary": "Sam Jonsan is a Computer Engineering student (expected graduation July 2027) located in Turkey. Their professional experience includes a Crowdsourced Tester role and a Market & Partnership Analyst position, neither of which involves direct software development. Project experience demonstrates proficiency in SQL, Python, PHP, and database design (MySQL, Oracle). They have strong skills in SQL, working with relational databases, and good command of English. However, there is no explicit experience with Java or the Spring Framework.",
   "red_flags": [
-    "The primary internship (WEB DEVELOPER INTERN – ENOCA) dates (04/2025 – 06/2026) are in the future, indicating that the candidate does not currently meet the 'at least 1 year professional or long-term internship experience' requirement. This needs clarification.",
-    "The candidate is currently based in Karabuk, while the job requires relocation to Ankara.",
-    "The candidate is still pursuing a Bachelor's degree in Computer Engineering (graduating in 2027), not yet graduated."
+    "Does not meet the '1+ years of hands-on software development experience' requirement, as current experience is primarily student projects and non-development roles.",
+    "No professional experience with Java development.",
+    "No experience with the Spring Framework or Spring Boot, which are core requirements for the role.",
+    "No explicit mention of Object-Oriented Programming (OOP), analysis, and design principles, or common design patterns.",
+    "Current student status (graduating 2027) indicates limited availability for a full-time role at the specified experience level."
   ],
-  "recommendation": "moderate_fit"
+  "recommendation": "weak_fit"
 }

@@ -1,61 +1,126 @@
-
 import { useState } from 'react';
 import '../styles/CandidateEvaluation.css';
-type EvaluationResult = {
-    name: string;
-    email: string;
-    phone: string;
-    overall_score: number;
-    matched_skills: string[];
-    missing_skills: string[];
-    experience_summary: string;
-    red_flags: string[];
-    recommendation: string;
-  
-};
+import arrow_down from '../assets/arrow_down.png';
+import arrow_up from '../assets/arrow_up.png';
 
+type EvaluationResult = {
+  name: string;
+  email: string;
+  phone: string;
+  overall_score: number;
+  matched_skills: string[];
+  missing_skills: string[];
+  experience_summary: string;
+  red_flags: string[];
+  recommendation: string;
+};
 
 type Props = {
-    evaluate: EvaluationResult[];
+  evaluate: EvaluationResult[];
 };
-export default function CandidateEvaluation({ evaluate }: Props) {
-  console.log(evaluate);
-  if (!evaluate) return null;
+
+const scoreColor = (recommendation: string) => {
+  if (recommendation === 'strong_fit') return 'green';
+  if (recommendation === 'moderate_fit') return 'orange';
+  return 'red';
+};
+
+function CandidateCard({ candidate }: { candidate: EvaluationResult }) {
   const [showMore, setShowMore] = useState(false);
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const categories = [
-    { matched_skills: 'skills', label: 'Matched Skills', content: evaluate.matched_skills },
-    { key: 'missing_skills', label: 'Missing Skills', content: evaluate.missing_skills },
-    { red_flags: 'education', label: 'Red Flags', content: evaluate.red_flags },
+    { key: 'matched_skills', label: 'Matched Skills', content: candidate.matched_skills },
+    { key: 'missing_skills', label: 'Missing Skills', content: candidate.missing_skills },
+    { key: 'red_flags', label: 'Red Flags', content: candidate.red_flags },
   ];
+
+  const active = categories.find((c) => c.key === activeCategory);
+  const Email = "mailto:"+candidate.email.toString();
+
+  return (
+    <div
+      style={{
+        border: '1px solid #ddd',
+        borderRadius: 8,
+        marginTop: 16,
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <div className="info">
+        <div className="left-side">
+          <p><strong>Name:</strong></p>
+          <p><strong>Email:</strong> <a href={`mailto:${candidate.email}`}>{candidate.email}</a> </p>
+        </div>
+        <div className="right-side">
+          <p style={{ color: scoreColor(candidate.recommendation) }}>
+            {candidate.overall_score}/100
+          </p>
+          <p><strong>Phone:</strong><a href={`tel:${candidate.phone}`}> {candidate.phone}</a></p>
+        </div>
+      </div>
+
+      <button onClick={() => setShowMore(!showMore)} className='showMore'>
+        {showMore ? <img src= {arrow_up} /> : <img src= {arrow_down}/>}
+      </button>
+
+      {showMore && (
+        <div style={{ marginTop: 12 }}>
+          <p><strong>Experience Summary:</strong> {candidate.experience_summary}</p>
+
+          <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
+            {categories.map((cat) => (
+              <button
+                key={cat.key}
+                onClick={() => setActiveCategory(cat.key)}
+                style={{
+                  width: '100%',
+                  padding: '4px 12px',
+                  borderRadius: 16,
+                  border: '1px solid #ccc',
+                  background: activeCategory === cat.key ?  '#f5f5f5' : 'none' ,
+                  color: activeCategory === cat.key ?  '#000' : '#fff',
+                  cursor: 'pointer',
+                  fontSize: '18px',
+                }}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+
+          {active && (
+            <div style={{ padding: 12, background: '#140c19', borderRadius: 6 }}>
+              {active.content.length > 0 ? (
+                <ul>
+                  {active.content.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>None</p>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function CandidateEvaluation({ evaluate }: Props) {
+  if (!evaluate) return null;
+
   const sortedCandidates = [...evaluate].sort((a, b) => b.overall_score - a.overall_score);
+
   return (
     <div className="evaluation-results">
-      
       {sortedCandidates.map((candidate, index) => (
-        <div style={{ border: '1px solid #ddd', borderRadius: 8, padding: 16, marginTop: 16, justifyContent: 'center', alignContent: 'center'}}>
-        <div className='info' key={index} >
-          <div className='lest-side'>
-          <p><strong>Name:</strong> {candidate.name}</p>
-          <p><strong>Email:</strong> {candidate.email}</p>
-          </div>
-          <div className="right-side">
-            <p {...(candidate.recommendation === 'strong_fit' ? { style: { color: "green" } } : candidate.recommendation === 'moderate_fit' ? { style: { color: "orange" } } : { style: { color: "red" } })}>
-              {candidate.overall_score}/100
-            </p>
-            <p><strong>Phone:</strong> {candidate.phone}</p>
-          </div>
-          
-        </div>
-        <button onClick={() => {setClicked(!isClicked)}}>Show more \/</button>
-          <div {...(isClicked ? {style: {display: 'flex'}} : {style: {display:'none'}})}>
-            <p><strong>Experience Summary: </strong>{candidate.experience_summary}</p>
-          </div>
-        </div>
+        <CandidateCard key={index} candidate={candidate} />
       ))}
-      
-
-      </div>
+    </div>
   );
 }
