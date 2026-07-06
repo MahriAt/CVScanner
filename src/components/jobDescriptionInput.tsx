@@ -1,7 +1,7 @@
-import { useState } from 'react';
+
 import '../styles/jobDescriptionInput.css'
 
-export default function jobDescriptionInput({ value, onChange }) {
+export default function jobDescriptionInput({ value, onChange }: { value: string; onChange: (v: string) => void }) {
     return (
         <div className="job-description-input">
             <h1>Job Description</h1>

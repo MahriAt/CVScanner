@@ -9,13 +9,12 @@ export default function DragAndDrop({ onFileSelect }: DragAndDropProps) {
 
     const uploadRef = useRef<HTMLInputElement>(null);
     const [file, setFile] = useState<File[] | null>(null);
-    const [url, setUrl] = useState<string | null>(null);
     const [isDragOver, setIsDragOver] = useState(false);
     
     
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>)=> {
-        if(uploadRef.current?.files[0].type !== 'application/pdf' && uploadRef.current?.files[0].type !== 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+    const handleChange = ()=> {
+        if (uploadRef.current?.files?.[0].type !== 'application/pdf' && uploadRef.current?.files?.[0].type !=='application/vnd.openxmlformats-officedocument.wordprocessingml.document')    
             return alert("Please upload a PDF or DOCX file")
         console.log(uploadRef.current?.files[0])
         const fileArray = Array.from(uploadRef.current?.files || []);
@@ -38,7 +37,6 @@ export default function DragAndDrop({ onFileSelect }: DragAndDropProps) {
         console.log(e.dataTransfer.files[0])
         const fileArray = Array.from(e.dataTransfer.files);
         setFile(fileArray)
-        setUrl(URL.createObjectURL(e.dataTransfer.files[0]))
         setIsDragOver(false)
         onFileSelect(fileArray);
     }
@@ -52,7 +50,7 @@ export default function DragAndDrop({ onFileSelect }: DragAndDropProps) {
     onDrop={handleDrop}
     onDragLeave={() => setIsDragOver(false)}
     >
-        <input ref={uploadRef} type="file" multiple style= {{display: 'none'}} onChange={handleChange} />
+        <input type="file" ref={uploadRef} multiple style= {{display: 'none'}} onChange={handleChange} />
         <h2>Upload</h2>
         { file && file.map((f, i) => <p key={i}>{f.name}</p>)}
     </div>

@@ -36,7 +36,6 @@ function CandidateCard({ candidate }: { candidate: EvaluationResult }) {
   ];
 
   const active = categories.find((c) => c.key === activeCategory);
-  const Email = "mailto:"+candidate.email.toString();
 
   return (
     <div
