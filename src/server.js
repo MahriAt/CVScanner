@@ -8,12 +8,7 @@ import fs from 'fs';
 import express from 'express';
 import cors from 'cors';
 import { z } from 'zod';
-/*const cvSampleText = readFileSync(new URL('./cvSampleText.txt', import.meta.url), 'utf-8');
-const jobDescriptionText = readFileSync(new URL('./jobDescription.txt', import.meta.url), 'utf-8');
-const cvSamplePDF = readFileSync(new URL('./cvSamplePDF.pdf', import.meta.url));
-const cvSampleDOC = readFileSync(new URL('./cvSampleDOC.docx', import.meta.url));
-const cvSampleTUR = readFileSync(new URL('./cvSampleTUR.docx', import.meta.url));
-const result = await mammoth.extractRawText({ buffer: cvSampleTUR }); */
+
 
 dotenv.config({ path: path.resolve(process.cwd(), 'GEMINI_API_KEY.env') });
 
