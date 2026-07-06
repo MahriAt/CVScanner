@@ -1,7 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import dotenv from 'dotenv';
 import path from 'path';
-import cvSample from './cvSample.json' with { type: 'json' };
 import { readFileSync } from 'fs';
 import mammoth from 'mammoth';
 import fs from 'fs';
