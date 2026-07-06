@@ -1,30 +1,35 @@
 {
-  "overall_score": 68,
+  "name": "Mahri Atamammedova",
+  "phone": "(+90) 5065229107",
+  "email": "mahriatama11@gmail.com",
+  "overall_score": 70,
   "matched_skills": [
-    "React.js",
+    "Node.js",
+    "TypeScript",
     "JavaScript",
+    "MySQL",
+    "SQL",
     "HTML",
     "CSS",
-    "Experience with React and its core principles",
-    "Bachelor of Science in Computer Science",
-    "Minimum of 2 years of professional experience with React.js (3 years)",
-    "Experience with RESTful APIs and integrating frontend components with backend services (inferred from Node.js experience)"
+    "React",
+    "Git",
+    "GitHub",
+    "Backend Development Logic",
+    "Frontend Development",
+    "Data Models",
+    "RESTful API Design",
+    "Linux",
+    "Bug Reporting",
+    "New Technologies Learning Aptitude"
   ],
   "missing_skills": [
-    "TypeScript",
-    "Frontend build tools (e.g., Webpack)",
-    "Package managers (e.g., npm)",
-    "Version control systems (particularly Git)",
-    "Responsive design and mobile-first development principles",
-    "Wordpress and its theming system (Nice-to-have)",
-    "CSS preprocessors (e.g., Sass or LESS) (Nice-to-have)"
+    "Active participation in bug fixing (coding-level)"
   ],
-  "experience_summary": "Ben Jason has 3 years of experience as a Software Engineer, exceeding the job's minimum requirement of 2 years with React.js. He holds a Bachelor of Science in Computer Science, fulfilling the educational criteria. His professional background includes developing web applications using React and Node.js, indicating strong proficiency in React and experience integrating frontend components with backend services. He has also worked on personal projects leveraging HTML, CSS, and JavaScript.",
+  "experience_summary": "Mahri is currently a Computer Engineering student with significant hands-on project experience, including a full-stack AI-powered web application built with React, TypeScript, Node.js, and Express. She demonstrates strong technical proficiency in Node.js backend development, MySQL database operations, and modern frontend technologies. She also holds an ongoing QA Tester role. However, she currently lacks documented professional software development experience of at least one year, as her listed 'Web Developer Intern' position dates (04/2025 – 06/2026) are in the future.",
   "red_flags": [
-    "Candidate is located in the USA, while the role is exclusively on-site in Antalya. While relocation support is offered, this is a significant logistical difference.",
-    "The CV does not explicitly mention proficiency in TypeScript, which is a strong requirement.",
-    "Key frontend development tools like Webpack, npm, and Git are not explicitly listed in the skills section, despite being fundamental for such a role.",
-    "No explicit mention of responsive design and mobile-first development principles."
+    "The primary internship (WEB DEVELOPER INTERN – ENOCA) dates (04/2025 – 06/2026) are in the future, indicating that the candidate does not currently meet the 'at least 1 year professional or long-term internship experience' requirement. This needs clarification.",
+    "The candidate is currently based in Karabuk, while the job requires relocation to Ankara.",
+    "The candidate is still pursuing a Bachelor's degree in Computer Engineering (graduating in 2027), not yet graduated."
   ],
   "recommendation": "moderate_fit"
 }

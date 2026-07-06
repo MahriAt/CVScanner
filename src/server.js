@@ -25,6 +25,9 @@ app.use(express.json());
 
 
 const evaluationSchema = z.object({
+  name: z.string(),
+  phone: z.string(),
+  email: z.string().email(),
   overall_score: z.number().min(0).max(100),
   matched_skills: z.array(z.string()),
   missing_skills: z.array(z.string()),
@@ -52,6 +55,9 @@ async function evaluate(cvText, jobDescriptionText) {
 
 Return ONLY valid JSON matching this schema:
 {
+  "name": string,
+  "phone": string,
+  "email": string,
   "overall_score": number (0-100),
   "matched_skills": string[],
   "missing_skills": string[],

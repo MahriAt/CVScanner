@@ -1,0 +1,16 @@
+.evaluation-results {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+}
+.right-side{
+    margin-left: auto;
+    text-align: right;
+    justify-content: end;
+}
