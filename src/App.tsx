@@ -50,7 +50,7 @@ function App() {
       const cvText = await convertFileToText(file);
       setLoading(true);
       try {
-        const res = await fetch('https://cvscanner-lhlp.onrender.com', {
+        const res = await fetch('https://cvscanner-lhlp.onrender.com/api/evaluate', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
