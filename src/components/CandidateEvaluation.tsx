@@ -51,7 +51,7 @@ function CandidateCard({ candidate }: { candidate: EvaluationResult }) {
     >
       <div className="info">
         <div className="left-side">
-          <p><strong>Name:</strong></p>
+          <p><strong>Name:</strong>{candidate.name}</p>
           <p><strong>Email:</strong> <a href={`mailto:${candidate.email}`}>{candidate.email}</a> </p>
         </div>
         <div className="right-side">
