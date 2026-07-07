@@ -21,7 +21,7 @@ app.use(express.json());
 const evaluationSchema = z.object({
   name: z.string(),
   phone: z.string(),
-  email: z.string().email(),
+  email: z.string(),
   overall_score: z.number().min(0).max(100),
   matched_skills: z.array(z.string()),
   missing_skills: z.array(z.string()),

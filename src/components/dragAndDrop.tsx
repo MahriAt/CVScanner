@@ -10,13 +10,18 @@ export default function DragAndDrop({ onFileSelect }: DragAndDropProps) {
     const uploadRef = useRef<HTMLInputElement>(null);
     const [file, setFile] = useState<File[] | null>(null);
     const [isDragOver, setIsDragOver] = useState(false);
+    const [error, setError] = useState(false)
     
     
 
     const handleChange = ()=> {
-        if (uploadRef.current?.files?.[0].type !== 'application/pdf' && uploadRef.current?.files?.[0].type !=='application/vnd.openxmlformats-officedocument.wordprocessingml.document')    
-            return alert("Please upload a PDF or DOCX file")
-        console.log(uploadRef.current?.files[0])
+        const file = uploadRef.current?.files?.[0];
+        if (!file || (file.type !== 'application/pdf' && 
+            file.type !== 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') ||
+             file.size > (1 * 1024 * 1024 )){
+            
+            return setError(true)}
+        console.log(file)
         const fileArray = Array.from(uploadRef.current?.files || []);
         setFile(fileArray)
         onFileSelect(fileArray);
@@ -28,9 +33,13 @@ export default function DragAndDrop({ onFileSelect }: DragAndDropProps) {
         setIsDragOver(true)
     }
     const handleDrop = (e: React.DragEvent<HTMLDivElement>)=> {
-        if(e.dataTransfer.files.item(0)?.type !== 'application/pdf' && e.dataTransfer.files.item(0)?.type !== 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+        const dragFile = e.dataTransfer.files.item(0);
+        if (!dragFile ||
+            (dragFile.type !== 'application/pdf' &&
+             dragFile.type !== 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') ||
+            dragFile.size > (1 * 1024 * 1024)) {
             e.preventDefault()
-            return alert("Please upload a PDF or DOCX file")
+            return setError(true)
         }
         e.preventDefault()
         console.log("File dropped")
@@ -54,6 +63,14 @@ export default function DragAndDrop({ onFileSelect }: DragAndDropProps) {
         <h2>Upload</h2>
         { file && file.map((f, i) => <p key={i}>{f.name}</p>)}
     </div>
-    <button className="Buttoms_submit_Clear" onClick={()=>{setFile(null); if(uploadRef.current) uploadRef.current.value = '';}}>Clear</button>
+    {error? <p style={{color: 'red'}}>Please upload PDF or DOCX file not bigger 1MB</p> : <p></p>}
+    <button 
+    className="Buttoms_submit_Clear" 
+    onClick={()=>{setFile(null); 
+    if(uploadRef.current) 
+        uploadRef.current.value = ''; 
+    setError(false)}}>
+        Clear
+    </button>
     </div>);
 }
